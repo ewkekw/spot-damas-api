@@ -64,6 +64,7 @@
         "id": "long",
         "nome": "string",
         "email": "string",
+        "senha": "string",
         "estado_id": "string",
         "cidade_id": "string"
       }
@@ -94,6 +95,7 @@
         "id": "long",
         "nome": "string",
         "email": "string",
+        "senha": "string",
         "estado_id": "string",
         "cidade_id": "string"
       }
@@ -313,6 +315,7 @@
         "id": "long",
         "name": "string",
         "email": "string",
+        "password": "string",
         "state_id": "string",
         "city_id": "string"
       }
@@ -343,6 +346,7 @@
         "id": "long",
         "name": "string",
         "email": "string",
+        "password": "string",
         "state_id": "string",
         "city_id": "string"
       }
