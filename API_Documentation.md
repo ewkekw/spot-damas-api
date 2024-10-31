@@ -1,6 +1,6 @@
 # 📑 Tournament Manager API Documentation
 
-### ** Select your language | Selecione o idioma**
+### Select your language | Selecione o idioma 
 
 - [🇧🇷 Português](#documentação-da-api-para-o-aplicativo-de-torneios-de-damas)
 - [🇺🇸 English](#tournament-manager-api-documentation)
@@ -13,7 +13,7 @@
 
 
 
-## 🇧🇷 Documentação da API para o Aplicativo de Torneios de Damas
+## Documentação da API para o Aplicativo de Torneios de Damas
 
 ### Sumário
 
@@ -262,7 +262,7 @@
 
 
 
-## 🇺🇸 Tournament Manager API Documentation
+## Tournament Manager API Documentation
 
 ### Table of Contents
 
