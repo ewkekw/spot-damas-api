@@ -25,10 +25,11 @@ Before running the project, ensure you have the following installed:
 - [PostgreSQL](https://www.postgresql.org/) (version 12 or higher)
 - [Mockaroo](https://mockaroo.com/) account for generating mock data.
 
-
 ## API Documentation
 
 Swagger is used for API documentation. After starting the server, you can access the documentation at `http://localhost:8080/swagger-ui.html`.
+
+`🔧 Technical Documentation` For a detailed description of all API routes and their usage, refer to the [Technical API Documentation](./API_Documentation.md).
 
 ## Contributing
 
