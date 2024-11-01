@@ -1,10 +1,10 @@
-package org.ewkekw.spotdamasapi;
+package org.ewkekw.spot.damas.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpotDamasApiApplicationTests {
+class AppTest {
 
     @Test
     void contextLoads() {

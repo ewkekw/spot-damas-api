@@ -1,13 +1,13 @@
-package org.ewkekw.spotdamasapi;
+package org.ewkekw.spot.damas.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpotDamasApiApplication {
+public class App {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpotDamasApiApplication.class, args);
+        SpringApplication.run(App.class, args);
     }
 
 }

@@ -65,8 +65,8 @@
         "nome": "string",
         "email": "string",
         "senha": "string",
-        "estado_id": "string",
-        "cidade_id": "string"
+        "estado_id": "long",
+        "cidade_id": "long"
       }
       ```
 - **Lógica Aplicada**: Após o registro, o front-end deve armazenar os dados retornados para manter o usuário conectado (ex.: usando `localStorage` ou `sessionStorage`).
@@ -96,8 +96,8 @@
         "nome": "string",
         "email": "string",
         "senha": "string",
-        "estado_id": "string",
-        "cidade_id": "string"
+        "estado_id": "long",
+        "cidade_id": "long"
       }
       ```
 - **Lógica Aplicada**: O front-end deve armazenar o `id` e os dados retornados para gerenciar a sessão e permitir acesso contínuo às funcionalidades.
