@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.ewkekw.spot.damas.api.repository.TournamentRepository">
+    <select id="findUpcomingTournaments" resultType="org.ewkekw.spot.damas.api.model.Tournament">
+        SELECT nome, descricao, data, horario, local, preco
+        FROM tournaments
+        WHERE estado_id = #{estadoId} AND cidade_id = #{cidadeId}
+        AND data >= CURRENT_DATE
+        ORDER BY data ASC
+        LIMIT #{limit}
+    </select>
+
+    <select id="findAllUpcomingTournaments" resultType="org.ewkekw.spot.damas.api.model.Tournament">
+        SELECT nome, descricao, data, horario, local, preco
+        FROM tournaments
+        WHERE estado_id = #{estadoId} AND cidade_id = #{cidadeId}
+        AND data >= CURRENT_DATE
+        ORDER BY data ASC
+    </select>
+
+    <select id="filterTournaments" resultType="org.ewkekw.spot.damas.api.model.Tournament">
+        SELECT nome, descricao, data, horario, local, preco
+        FROM torneios
+        WHERE 1=1
+        <if test="estadoId != null"> AND estado_id = #{estadoId} </if>
+        <if test="cidadeId != null"> AND cidade_id = #{cidadeId} </if>
+        <if test="data != null"> AND data = #{data} </if>
+        ORDER BY data ASC
+    </select>
+
+    <insert id="insertTournament" parameterType="org.ewkekw.spot.damas.api.model.Tournament" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO torneios (nome, descricao, data, horario, local, preco, estado_id, cidade_id)
+        VALUES (#{nome}, #{descricao}, #{data}, #{horario}, #{local}, #{preco}, #{estadoId}, #{cidadeId})
+    </insert>
+
+    <delete id="deleteTournamentById" parameterType="long">
+        DELETE FROM torneios WHERE id = #{id}
+    </delete>
+</mapper>
