@@ -1,4 +1,4 @@
-package org.ewkekw.spot.damas.api.service.impl;
+package org.ewkekw.spot.damas.api.service;
 
 import org.ewkekw.spot.damas.api.model.User;
 import org.springframework.stereotype.Service;

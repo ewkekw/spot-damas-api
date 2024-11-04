@@ -27,9 +27,10 @@ Before running the project, ensure you have the following installed:
 
 ## API Documentation
 
-Swagger is used for API documentation. After starting the server, you can access the documentation at `http://localhost:8080/swagger-ui.html`.
+### 🔧 [Technical Documentation](./API_Documentation.md) | For a detailed description of all API routes and their usage.
 
-`🔧 Technical Documentation` For a detailed description of all API routes and their usage, refer to the [Technical API Documentation](./API_Documentation.md).
+Swagger is used for API documentation too. After starting the server, you can access the documentation at `http://localhost:8080/swagger-ui.html`.
+
 
 ## Contributing
 

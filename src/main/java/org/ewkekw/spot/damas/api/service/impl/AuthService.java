@@ -2,6 +2,7 @@ package org.ewkekw.spot.damas.api.service.impl;
 
 import org.ewkekw.spot.damas.api.model.User;
 import org.ewkekw.spot.damas.api.repository.AuthRepository;
+import org.ewkekw.spot.damas.api.service.IAuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

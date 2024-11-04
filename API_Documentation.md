@@ -106,13 +106,31 @@
 
 ### Rota de Busca de Região (Estados e Cidades)
 
-- **Descrição**: Permite a busca de **Estados** e **Cidades** para registro ou atualização de perfil.
+- **Descrição**: Permite a busca dinâmica de **Cidades** com suas respectivas siglas de **Estados** para registro ou atualização de perfil.
 - **Método HTTP**: `GET`
-- **Endpoints**:
-    - `/states` para listar todos os estados disponíveis.
-    - `/states/:id/cities` para listar as cidades associadas ao estado selecionado.
-- **Lógica Aplicada**: O front-end deve iniciar a busca de cidades após o terceiro caractere digitado, e o estado e cidade escolhidos serão vinculados ao perfil do usuário.
+- **Endpoint**: `/location?seach={caracteres}`
+    - **Parâmetro de Query**: `caracteres` - Representa os caracteres iniciais digitados pelo usuário para buscar a cidade. A busca começa após o terceiro caractere.
+- **Lógica Aplicada**: O front-end inicia a busca após o usuário digitar o terceiro caractere. A API retorna uma lista de cidades que contêm a sequência digitada, junto com a sigla do estado. O usuário seleciona a cidade desejada, e o sistema vincula automaticamente o `cidade_id` e `estado_id` ao perfil do usuário.
 
+- **Resposta**:
+    - **Status**: `200 OK`
+    - **Exemplo de Corpo da Resposta**:
+      ```json
+      [
+        {
+          "cidade_id": 1,
+          "nome_cidade": "Fortaleza",
+          "estado_id": 6,
+          "sigla_estado": "CE"
+        },
+        {
+          "cidade_id": 2,
+          "nome_cidade": "Fortinópolis",
+          "estado_id": 6,
+          "sigla_estado": "CE"
+        }
+      ]
+      ```
 
 
 ## Menu Inicial
@@ -357,14 +375,31 @@
 
 ### Region Search Route (States and Cities)
 
-- **Description**: Allows searching for **States** and **Cities** for registration or profile update.
+- **Description**: Allows dynamic search for **Cities** along with their respective **State** abbreviations for registration or profile update.
 - **HTTP Method**: `GET`
-- **Endpoints**:
-    - `/states` to list all available states.
-    - `/states/:id/cities` to list cities associated with the selected state.
-- **Logic Applied**: The front-end should initiate city search after the third character is typed, and the chosen state and city will be linked to the user's profile.
+- **Endpoint**: `/cities?query={query}`
+    - **Query Parameter**: `query` - Represents the initial characters typed by the user to search for the city. The search starts after the third character.
+- **Logic Applied**: The front-end initiates the search after the user types the third character. The API returns a list of cities containing the typed sequence, along with the state abbreviation. The user selects the desired city, and the system automatically links the `city_id` and `state_id` to the user’s profile.
 
-
+- **Response**:
+    - **Status**: `200 OK`
+    - **Sample Response Body**:
+      ```json
+      [
+        {
+          "city_id": 1,
+          "city_name": "Fortaleza",
+          "state_id": 6,
+          "state_abbr": "CE"
+        },
+        {
+          "city_id": 2,
+          "city_name": "Fortinópolis",
+          "state_id": 6,
+          "state_abbr": "CE"
+        }
+      ]
+      ``` 
 
 ## Main Menu
 

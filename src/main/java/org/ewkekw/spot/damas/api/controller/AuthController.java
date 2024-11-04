@@ -1,7 +1,7 @@
 package org.ewkekw.spot.damas.api.controller;
 
 import org.ewkekw.spot.damas.api.model.User;
-import org.ewkekw.spot.damas.api.service.impl.IAuthService;
+import org.ewkekw.spot.damas.api.service.IAuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

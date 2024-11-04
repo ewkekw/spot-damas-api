@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.ewkekw.spot.damas.api.repository.LocationRepository">
+    <resultMap id="CityWithStateResultMap" type="org.ewkekw.spot.damas.api.model.DTO.CityDTO">
+        <id property="id" column="cidade_id"/>
+        <result property="nome" column="nome_cidade"/>
+        <result property="stateId" column="estado_id"/>
+        <result property="sigla" column="sigla_estado"/>
+    </resultMap>
+
+    <select id="findCitiesByName" resultMap="CityWithStateResultMap">
+        SELECT c.id AS cidade_id, c.nome AS nome_cidade, s.id AS estado_id, s.sigla AS sigla_estado
+        FROM cities c
+        JOIN states s ON c.state_id = s.id
+        WHERE LOWER(c.nome) LIKE CONCAT('%', LOWER(#{search}), '%')
+    </select>
+</mapper>
