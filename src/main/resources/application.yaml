@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/spot_damas # Substitua pelo nome correto do seu banco
-    username: yourUsername # Substitua pelo seu usu·rio
-    password: yourPassword # Substitua pela sua senha
+    url: jdbc:postgresql://localhost:5432/spot-damas # Substitua pelo nome correto do seu banco
+    username: postgres # Substitua pelo seu usu√°rio
+    password: postgres # Substitua pela sua senha
     driver-class-name: org.postgresql.Driver
 
 mybatis:
