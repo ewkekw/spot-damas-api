@@ -1,10 +1,10 @@
 package org.ewkekw.spot.damas.api.repository;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.ewkekw.spot.damas.api.model.User;
-import org.springframework.stereotype.Repository;
 
-@Repository
+@Mapper
 public interface AuthRepository {
     User save(User user);
 

@@ -13,13 +13,13 @@
     </resultMap>
 
     <select id="save" resultMap="UserResultMap">
-        INSERT INTO users (nome, email, senha, estado_id, cidade_id)
+        INSERT INTO public.users (nome, email, senha, estado_id, cidade_id)
         VALUES (#{nome}, #{email}, #{senha}, #{estadoId}, #{cidadeId})
         RETURNING id, nome, email, senha, estado_id, cidade_id
     </select>
 
     <select id="findByEmailAndSenha" parameterType="map" resultMap="UserResultMap">
-        SELECT * FROM users WHERE email = #{email} AND senha = #{senha}
+        SELECT * FROM public.users WHERE email = #{email} AND senha = #{senha}
     </select>
 
 </mapper>

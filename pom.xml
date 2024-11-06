@@ -55,7 +55,7 @@
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.2.0</version> <!-- Check for the latest version -->
+            <version>3.0.3</version> <!-- Check for the latest version -->
         </dependency>
 
         <!-- Jackson (Serialization/Deserialization of JSON) -->
@@ -64,12 +64,6 @@
             <artifactId>jackson-databind</artifactId>
         </dependency>
 
-        <!-- Swagger (API Documentation) -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
-            <version>3.0.0</version>
-        </dependency>
 
         <!-- JUnit 5 (Testing Framework) -->
         <dependency>
@@ -78,6 +72,13 @@
             <version>5.7.0</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>1.7.0</version>
+        </dependency>
+
 
         <!-- Mockito (Mocking in Tests) -->
         <dependency>

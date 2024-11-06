@@ -6,13 +6,14 @@
         <id property="id" column="id"/>
         <result property="nome" column="nome"/>
         <result property="email" column="email"/>
+        <result property="senha" column="senha"/>
         <result property="estadoId" column="estado_id"/>
         <result property="cidadeId" column="cidade_id"/>
     </resultMap>
 
     <select id="findById" resultMap="UserResultMap">
-        SELECT id, nome, email, estado_id, cidade_id
-        FROM usuarios
+        SELECT id, nome, email, senha, estado_id, cidade_id
+        FROM users
         WHERE id = #{id}
     </select>
 </mapper>

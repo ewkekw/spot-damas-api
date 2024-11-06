@@ -6,7 +6,7 @@ spring:
     driver-class-name: org.postgresql.Driver
 
 mybatis:
-    mapper-locations: classpath*:**/mappers/*Mapper.xml
+  mapper-locations: classpath*:**/mappers/*Mapper.xml
 
 server:
-  port: 8080
+  port: 1000

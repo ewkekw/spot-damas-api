@@ -241,12 +241,14 @@
 - **Corpo da Requisição**:
     ```json
     {
-      "nome": "string",
-      "descricao": "string",
-      "data": "dd/MM/yyyy",
-      "horario": "HH:mm",
-      "local": "string",
-      "preco": "0,00"
+       "nome": "Torneio de Verão",
+       "descricao": "Competição amistosa para jogadores de todos os níveis.",
+       "data": "15/12/2024",
+       "horario": "14:00",
+       "local": "Centro de Esportes da Cidade",
+       "preco": 20.00,
+       "estado_id": 10,
+       "cidade_id": 1314
     }
     ```
 - **Resposta**: Status `201 Created`, com o `id` do torneio e informações criadas.
