@@ -52,8 +52,8 @@
       "nome": "string",
       "email": "string",
       "senha": "string",
-      "estado_id": "long",
-      "cidade_id": "long"
+      "estado_id": long,
+      "cidade_id": long
     }
     ```
 - **Resposta**:
@@ -61,12 +61,12 @@
     - **Corpo da Resposta**:
       ```json
       {
-        "id": "long",
+        "id": long,
         "nome": "string",
         "email": "string",
         "senha": "string",
-        "estado_id": "long",
-        "cidade_id": "long"
+        "estado_id": long,
+        "cidade_id": long
       }
       ```
 - **Lógica Aplicada**: Após o registro, o front-end deve armazenar os dados retornados para manter o usuário conectado (ex.: usando `localStorage` ou `sessionStorage`).
@@ -240,7 +240,7 @@
 - **Endpoint**: `/torneios`
 - **Corpo da Requisição**:
     ```json
-    {
+    { 
        "nome": "Torneio de Verão",
        "descricao": "Competição amistosa para jogadores de todos os níveis.",
        "data": "15/12/2024",
